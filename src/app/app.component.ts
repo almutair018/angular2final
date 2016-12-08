@@ -8,19 +8,15 @@ import {Component} from '@angular/core';
 })
 
 export class AppComponent {
-  name: string;
-  artists: any;
+    name =  'Ray';
+    artists = ['Barot Bellingham', 'Jonathan Ferrar', 'Hillary Post'];
 
-  constructor() {
-    this.name =  'Ray';
-    this.artists = [
-      {
-          name: 'Barot Bellingham',
-          school: 'Penn State'
-      },{
-          name: 'Hillary Post',
-          school: 'University of Illinois'
-      }
-    ];
-  }
+    onClick(myName) {
+      this.name=myName;
+    }
+
+    addArtist(myArtist) {
+      this.artists.push(myArtist);
+    }
+
 }
